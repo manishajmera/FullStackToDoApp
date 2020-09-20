@@ -4,9 +4,19 @@ CREATE TABLE ToDoList (
     bucketID int NOT NUll,
     taskName varchar(255),
     del_status boolean not null DEFAULT 0,
+    mark_done boolean not null DEFAULT 0,
    	created_at timestamp DEFAULT CURRENT_TIMESTAMP,
     updated_at timestamp DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (todoID),
     FOREIGN Key (bucketID) REFERENCES BucketList(bucketID)
+);
+
+CREATE TABLE BucketList (
+    bucketID int NOT NULL AUTO_INCREMENT,
+    bucketName varchar(255),
+    del_status boolean not null DEFAULT 0,
+   	created_at timestamp DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (bucketID),
 );
  

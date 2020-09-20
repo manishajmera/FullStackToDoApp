@@ -32,7 +32,7 @@ export default function ListItems({
     listItems.map((item, index) => {
       h.push(
         listType ? (
-          <div className="bucket-list" key={index}>
+          <div className="bucket-list" key={`${item.title}_${item.bucketID}`}>
             <Link
               to={`/${item.title}_${item.bucketID}`}
               className="col-sm-9 col-xs-9"
@@ -48,7 +48,7 @@ export default function ListItems({
           </div>
         ) : (
           <li
-            key={index}
+            key={`${item.bucketID}-${item.todoID}-${item.title}`}
             className={`bucket-list ${item.markDone ? "crossed" : ""}`}
           >
             <input

@@ -1,0 +1,11 @@
+.bucket-list {
+   display: flex;
+   background: #fff;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.bucket-list a {
+    font-size: 16px;
+ }

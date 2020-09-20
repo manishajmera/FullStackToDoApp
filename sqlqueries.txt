@@ -1,0 +1,12 @@
+create database gswireco_todo_application;
+CREATE TABLE ToDoList (
+    todoID int NOT NULL AUTO_INCREMENT,
+    bucketID int NOT NUll,
+    taskName varchar(255),
+    del_status boolean not null DEFAULT 0,
+   	created_at timestamp DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (todoID),
+    FOREIGN Key (bucketID) REFERENCES BucketList(bucketID)
+);
+ 
